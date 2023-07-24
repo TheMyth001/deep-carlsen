@@ -150,19 +150,11 @@ def train():
             agent.train(states, rewards, next_states, eligibilities, done, losses)
 
             if done:
-                if reward == 1:
-                    print('won!')
                 plot(losses, agent.episodes)
                 agent.episodes += 1
                 agent.epsilon = 0.75 / int(1 + agent.episodes/200)
                 break
-
-
-def testing():
-    agent = Agent()
-    print(agent.model.global_layer.weight)
-
+                
 
 if __name__ == '__main__':
     train()
-    # testing()
