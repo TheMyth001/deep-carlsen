@@ -835,12 +835,5 @@ def play():
             break
 
 
-def testing():
-    board = Board()
-    board.display()
-    board.get_state(0)
-
-
 if __name__ == '__main__':
-    # play()
-    testing()
+    play()
