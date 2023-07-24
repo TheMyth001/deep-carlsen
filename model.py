@@ -10,7 +10,6 @@ MODEL_HYPERPARAMS = {
     'piece_nodes_2': 32,
     'attack_defend_nodes': 32,
     'overall': 32,
-    'loss': nn.MSELoss()
 }
 
 
@@ -76,11 +75,3 @@ class DNN(nn.Module):
             os.makedirs(model_folder_path)
         file_name = os.path.join(model_folder_path, file_name)
         torch.save(self.state_dict(), file_name)
-
-
-def testing():
-    pass
-
-
-if __name__ == '__main__':
-    testing()
